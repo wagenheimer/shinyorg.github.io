@@ -459,6 +459,16 @@ listener.Dispose();
     .WhenListenStatusChanged()
     .Subscribe(isListening =&gt; { you can talk if this is true });
 </code></pre>
+
+<h2 id="faq">Android 11 Support</h2>	
+To make Speech Recognition work on Android 11, you will need to add this to your AndroidManifest.xml					
+<pre><code class="language-csharp"><queries>
+    <intent>
+      <action android:name="android.speech.RecognitionService" />
+    </intent>
+</queries>
+</code></pre>					
+					
 <h2 id="faq">FAQ</h2>
 <ol type="A" start="17">
 <li><p>Why use reactive extensions and not async?</p>
